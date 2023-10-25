@@ -94,6 +94,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/b2"
+            app:layout_constraintTop_toTopOf="@+id/footer"
+            android:text="BOTON"
             />
         <Button
             android:id="@+id/b2"
@@ -101,6 +103,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toEndOf="@+id/b1"
             app:layout_constraintEnd_toStartOf="@+id/b3"
+            app:layout_constraintTop_toTopOf="@+id/footer"
+            android:text="BOTON"
             />
 
         <Button
@@ -109,6 +113,8 @@
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/b2"
+            app:layout_constraintTop_toTopOf="@+id/footer"
+            android:text="BOTON"
             />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
