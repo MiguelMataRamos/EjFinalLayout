@@ -32,11 +32,12 @@
         app:layout_constraintHorizontal_weight="1"/>
 
     <ScrollView
+        app:layout_constraintVertical_weight="1.6"
         android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/texto"
+        app:layout_constraintBottom_toTopOf="@+id/scroll2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cabecera"
@@ -44,8 +45,9 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/fondo">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -73,17 +75,51 @@
 
     </ScrollView>
 
-    <TextView
-        android:id="@+id/texto"
+    <ScrollView
+        android:id="@+id/scroll2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="MUCHOOOOOOOOOOOOOOOOOOOOOOOOOO ETXTTIOT YYYYYYYYYYYYY YYYYYYYYYYYYYYYYYYYYOOOOOOOOOOOOOOOOOOOOOOOOOEEEEEEEEESSSSSSSSSSSSSSSSSSSEEEEEEEEEEE"
+        app:layout_constraintVertical_weight="0.8"
         app:layout_constraintTop_toBottomOf="@+id/scroll"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/texto2"
         app:layout_constraintEnd_toStartOf="@+id/imagen"
-        app:layout_constraintBottom_toBottomOf="@+id/imagen"
-        app:layout_constraintHorizontal_weight="1"
-        android:gravity="center"/>
+        >
+
+        <TextView
+            android:id="@+id/textolatin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:gravity="end"
+            android:text="Super montes et procul a longe,
+                            Teletubbii veniunt ad ludendum.
+                            Tempus Teletubborum,
+                            Tempus Teletubborum,
+                            Tempus Teletubborum,
+                            Tempus Teletubborum.
+
+                            Dipsy: ¡Eh-oh!
+                            Laa-Laa: ¡Eh-oh!
+                            Tinky Winky: ¡Eh-oh!
+                            Po: ¡Eh-oh!
+
+                            Teletubbii dicunt salutem,
+                            Teletubbii dicunt salutem,
+                            Teletubbii dicunt salutem,
+                            Teletubbii dicunt salutem."
+            android:textColor="@color/yellow"
+            tools:ignore="TextContrastCheck" />
+
+    </ScrollView>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/medio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
 
     <ImageView
         android:id="@+id/imagen"
@@ -93,7 +129,7 @@
         android:src="@drawable/drogadicto"
         android:scaleType="fitXY"
         app:layout_constraintTop_toBottomOf="@+id/scroll"
-        app:layout_constraintStart_toEndOf="@+id/texto"
+        app:layout_constraintStart_toEndOf="@+id/medio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/texto2"
         app:layout_constraintHorizontal_weight="1"/>
@@ -103,11 +139,11 @@
         android:id="@+id/texto2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:text="TEXTO SIN MAS"
         app:layout_constraintTop_toBottomOf="@+id/imagen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/footer"
         android:gravity="center"
+        android:background="@drawable/si"
         />
 
 
